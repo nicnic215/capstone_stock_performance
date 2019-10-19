@@ -12,6 +12,9 @@ The goal of the project is, by training different classes of algorithms on diffe
 
 ## Our Approaches - Data Acquisition
 
+![alt text](https://github.com/nicnic215/capstone_stock_performance/blob/master/stock_table.png)
+
+
 Data Sources:
 
 Bloomberg Terminal, GuruForcus & AlphaVantage 
@@ -25,3 +28,5 @@ The target feature is the return calculated based on Fama-French five-factor ass
 Use data from 2000-2017 for training sets and 2018-2019 as testing test
 Define three training sets in a walk-forward approach
 Four different algorithms would be used on each of the training sets
+
+![alt text](https://github.com/nicnic215/capstone_stock_performance/blob/master/graph_flow.png)
