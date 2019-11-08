@@ -2,6 +2,7 @@
 
 ## Data Acquisition
 
+![alt test](screenshots/'stock selection)
 ### Data Sources
 
 Bloomberg Terminal, GuruForcus, MorningStar, Yahoo Finance & AlphaVantage
