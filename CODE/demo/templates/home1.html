@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Factor-based stock selection model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+
+<body>
+<h1>StochAIstics's Factor-based Stock Selection Model</h1>
+<p>Please select a month and three stocks of your choice to proceed</p>
+    <div>
+        <form action="/result" method="POST">
+            <div class="selected_month">
+                <label for="month">Month Selected</label>
+                <input type="month" id="month" name="month" min="2010-01" max="2019-09" required
+                    pattern="[0-9]{4}-[0-9]{2}">
+                <span class="validity"></span>
+            </div>
+            <br>
+            <div class="btn-group">
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Action
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+                  </div>
+            <div>
+                <label for="ticker1">Stock </label>
+                <select id="ticker1" name="ticker1">
+                    <option value="ABT">Abbott Laboratories (ABT)</option>
+                    <option value="ALXN">Alexion Pharmaceuticals, Inc. (ALXN)</option>
+                    <option value="AGN">Allergan Plc (AGN)</option>
+                    <option value="AMGN">Amgen Inc. (AMGN)</option>
+                    <option value="BAX">Baxter International Inc. (BAX)</option>
+                    <option value="BIIB">Biogen Inc. (BIIB)</option>
+                    <option value="BMRN">BioMarin Pharmaceutical Inc. (BMRN)</option>
+                    <option value="BMY">Bristol-Myers Squibb Company (BMY)</option>
+                    <option value="CELG">Celgene Corporation (CELG)</option>
+                    <option value="DHR">Danaher Corporation (DHR)</option>
+                    <option value="LLY">Eli Lilly and Company (LLY)</option>
+                    <option value="GILD">Gilead Sciences, Inc. (GILD)</option>
+                    <option value="ILMN">Illumina, Inc. (ILMN)</option>
+                    <option value="INCY">Incyte Corporation (INCY)</option>
+                    <option value="JNJ">Johnson & Johnson (JNJ)</option>
+                    <option value="LH">Laboratory Corporation of America Holdings (LH)</option>
+                    <option value="MRK">Merck & Co., Inc. (MRK)</option>
+                    <option value="PFE">Pfizer Inc. (PFE)</option>
+                    <option value="REGN">Regeneron Pharmaceuticals, Inc. (REGN)</option>
+                    <option value="SYK">Stryker Corporation (SYK)</option>
+                </select>
+
+                <label for="ticker2">Stock </label>
+                <select id="ticker2" name="ticker2">
+                    <option value="ABT">Abbott Laboratories (ABT)</option>
+                    <option value="ALXN">Alexion Pharmaceuticals, Inc. (ALXN)</option>
+                    <option value="AGN">Allergan Plc (AGN)</option>
+                    <option value="AMGN">Amgen Inc. (AMGN)</option>
+                    <option value="BAX">Baxter International Inc. (BAX)</option>
+                    <option value="BIIB">Biogen Inc. (BIIB)</option>
+                    <option value="BMRN">BioMarin Pharmaceutical Inc. (BMRN)</option>
+                    <option value="BMY">Bristol-Myers Squibb Company (BMY)</option>
+                    <option value="CELG">Celgene Corporation (CELG)</option>
+                    <option value="DHR">Danaher Corporation (DHR)</option>
+                    <option value="LLY">Eli Lilly and Company (LLY)</option>
+                    <option value="GILD">Gilead Sciences, Inc. (GILD)</option>
+                    <option value="ILMN">Illumina, Inc. (ILMN)</option>
+                    <option value="INCY">Incyte Corporation (INCY)</option>
+                    <option value="JNJ">Johnson & Johnson (JNJ)</option>
+                    <option value="LH">Laboratory Corporation of America Holdings (LH)</option>
+                    <option value="MRK">Merck & Co., Inc. (MRK)</option>
+                    <option value="PFE">Pfizer Inc. (PFE)</option>
+                    <option value="REGN">Regeneron Pharmaceuticals, Inc. (REGN)</option>
+                    <option value="SYK">Stryker Corporation (SYK)</option>
+                </select>
+
+                <label for="ticker3">Stock </label>
+                <select id="ticker3" name="ticker3">
+                    <option value="ABT">Abbott Laboratories (ABT)</option>
+                    <option value="ALXN">Alexion Pharmaceuticals, Inc. (ALXN)</option>
+                    <option value="AGN">Allergan Plc (AGN)</option>
+                    <option value="AMGN">Amgen Inc. (AMGN)</option>
+                    <option value="BAX">Baxter International Inc. (BAX)</option>
+                    <option value="BIIB">Biogen Inc. (BIIB)</option>
+                    <option value="BMRN">BioMarin Pharmaceutical Inc. (BMRN)</option>
+                    <option value="BMY">Bristol-Myers Squibb Company (BMY)</option>
+                    <option value="CELG">Celgene Corporation (CELG)</option>
+                    <option value="DHR">Danaher Corporation (DHR)</option>
+                    <option value="LLY">Eli Lilly and Company (LLY)</option>
+                    <option value="GILD">Gilead Sciences, Inc. (GILD)</option>
+                    <option value="ILMN">Illumina, Inc. (ILMN)</option>
+                    <option value="INCY">Incyte Corporation (INCY)</option>
+                    <option value="JNJ">Johnson & Johnson (JNJ)</option>
+                    <option value="LH">Laboratory Corporation of America Holdings (LH)</option>
+                    <option value="MRK">Merck & Co., Inc. (MRK)</option>
+                    <option value="PFE">Pfizer Inc. (PFE)</option>
+                    <option value="REGN">Regeneron Pharmaceuticals, Inc. (REGN)</option>
+                    <option value="SYK">Stryker Corporation (SYK)</option>
+                </select>
+            </div>      
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
